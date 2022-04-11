@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.xinchan.mybatis.mapper.demo.ProductMapper">
+	<!--int insertProduct();-->
+	<insert id="insertProduct">
+		insert into t_product values (null, "huawei phone", 5000.0);
+	</insert>
+
+	<!--void updateProduct();-->
+	<update id="updateProduct">
+		update t_product set prod_price = 3000 where prod_id = 1;
+	</update>
+
+	<!--void deleteProduct();-->
+	<delete id="deleteProduct">
+		delete from t_product where prod_id = 2;
+	</delete>
+
+	<!--Product selectProduct();-->
+	<select id="selectProduct" resultType="pers.xinchan.mybatis.pojo.Product">
+		select * from t_product where prod_price = 5000;
+	</select>
+	
+	<!--List<Product> selectAllProduct();-->
+	<select id="selectAllProduct" resultType="pers.xinchan.mybatis.pojo.Product">
+		select * from t_product;
+	</select>
+</mapper>

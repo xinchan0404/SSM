@@ -5,10 +5,10 @@
 <configuration>
 	<!--引入 properties 文件-->
 	<properties resource="jdbc.properties"/>
-	<!--设置别名-->
-	<typeAliases>
-		<package name=""/>
-	</typeAliases>
+	<!--&lt;!&ndash;设置别名&ndash;&gt;-->
+	<!--<typeAliases>-->
+	<!--	<package name=""/>-->
+	<!--</typeAliases>-->
 	<!--设置连接数据库的环境-->
 	<environments default="mybatis_demo">
 		<environment id="mybatis_demo">
@@ -23,6 +23,7 @@
 	</environments>
 	<!--引入映射文件-->
 	<mappers>
-		<package name=""/>
+		<mapper resource="mappers/demo/UserMapper.xml"/>
+		<mapper resource="mappers/demo/ProductMapper.xml"/>
 	</mappers>
 </configuration>
