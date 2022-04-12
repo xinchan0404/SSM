@@ -5,40 +5,50 @@ package pers.xinchan.mybatis.pojo;
  * @version 1.0.1 2022-04-11
  */
 public class Product {
-    private Integer prodId;
-    private String prodName;
-    private Double prodPrice;
+    private Integer id;
+    private String name;
+    private String vent;
+    private Double price;
 
-    public Integer getProdId() {
-        return prodId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setProdId(Integer prodId) {
-        this.prodId = prodId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getProdName() {
-        return prodName;
+    public String getName() {
+        return name;
     }
 
-    public void setProdName(String prodName) {
-        this.prodName = prodName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Double getProdPrice() {
-        return prodPrice;
+    public String getVent() {
+        return vent;
     }
 
-    public void setProdPrice(Double prodPrice) {
-        this.prodPrice = prodPrice;
+    public void setVent(String vent) {
+        this.vent = vent;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
         return "Product{" +
-                "prodId=" + prodId +
-                ", prodName='" + prodName + '\'' +
-                ", prodPrice=" + prodPrice +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", vent='" + vent + '\'' +
+                ", price=" + price +
                 '}';
     }
 }

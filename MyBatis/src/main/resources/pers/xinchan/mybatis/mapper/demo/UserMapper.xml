@@ -5,26 +5,26 @@
 <mapper namespace="pers.xinchan.mybatis.mapper.demo.UserMapper">
 	<!--int insertUser();-->
 	<insert id="insertUser">
-		insert into t_user values(null, "xinchan", "123456", 25, "male", "zhengxin0404@foxmail.com");
+		insert into t_user values(null, "xinchan", "123456", 25);
 	</insert>
 
 	<!--int updateProduct();-->
 	<update id="updateUser">
-		update t_user set username = "zhengxin" where id = 3;
+		update t_user set username = "zhengxin" where id = 5;
 	</update>
 
 	<!--void deleteUser();-->
 	<delete id="deleteUser">
-		delete from t_user where id = 2;
+		delete from t_user where id = 7;
 	</delete>
 
 	<!--User selectUser();-->
-	<select id="selectUser" resultType="pers.xinchan.mybatis.pojo.User">
-		select * from t_user where id = 3;
+	<select id="selectUser" resultType="User">
+		select * from t_user where id = 5;
 	</select>
 
 	<!--List<User> selectAllUser();-->
-	<select id="selectAllUser" resultType="pers.xinchan.mybatis.pojo.User">
+	<select id="selectAllUser" resultType="User">
 		select * from t_user;
 	</select>
 </mapper>

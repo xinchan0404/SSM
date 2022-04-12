@@ -47,6 +47,6 @@ public class ProductMapperTest {
         SqlSession sqlSession = MapperUtils.getSqlSession();
         ProductMapper mapper = sqlSession.getMapper(ProductMapper.class);
         List<Product> products = mapper.selectAllProduct();
-        System.out.println(products);
+        products.forEach(System.out::println);
     }
 }

@@ -47,6 +47,6 @@ public class UserMapperTest {
         SqlSession sqlSession = MapperUtils.getSqlSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         List<User> users = mapper.selectAllUser();
-        System.out.println(users);
+        users.forEach(System.out::println);
     }
 }
