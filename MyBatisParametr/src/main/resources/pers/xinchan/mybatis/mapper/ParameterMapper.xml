@@ -3,8 +3,13 @@
 		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pers.xinchan.mybatis.mapper.ParameterMapper">
-	<!--List<User> getAllUser();-->
-	<select id="getAllUser" resultType="User">
+	<!--void insertUser();-->
+	<insert id="insertUser">
+		insert into user values (null, "xinchan", "123456", 25);
+	</insert>
+
+	<!--void selectAllUser();-->
+	<select id="selectAllUser" resultType="User">
 		select * from user;
 	</select>
 </mapper>

@@ -2,7 +2,7 @@ package pers.xinchan.mybatis.pojo;
 
 /**
  * @author xinchan
- * @version 1.0.1 2022-04-12
+ * @version 1.0.1 2022-04-18
  */
 public class User {
     private Integer id;
