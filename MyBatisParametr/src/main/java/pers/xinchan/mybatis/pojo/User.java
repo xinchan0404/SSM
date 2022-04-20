@@ -10,6 +10,13 @@ public class User {
     private String password;
     private Integer age;
 
+    public User(Integer id, String username, String password, Integer age) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.age = age;
+    }
+
     public Integer getId() {
         return id;
     }
