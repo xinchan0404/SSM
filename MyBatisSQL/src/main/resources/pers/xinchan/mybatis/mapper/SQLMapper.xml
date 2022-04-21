@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.xinchan.mybatis.mapper.SQLMapper">
+	<!--List<User> fuzzyQueryByUsername(@Param("username") String username);-->
+	<select id="fuzzyQueryByUsername" resultType="User">
+		SELECT * FROM user WHERE username LIKE '%${username}%';
+	</select>
+
+	<!--List<User> fuzzyQueryByPassword(@Param("password") String password);-->
+	<select id="fuzzyQueryByPassword" resultType="User">
+		SELECT * FROM user WHERE password LIKE '%${password}%';
+	</select>
+</mapper>
