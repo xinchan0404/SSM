@@ -12,4 +12,11 @@
 	<select id="fuzzyQueryByPassword" resultType="User">
 		SELECT * FROM user WHERE password LIKE '%${password}%';
 	</select>
+
+	<!--void deleteUserById(@Param("ids") String ids);-->
+	<delete id="deleteUserById">
+		DELETE FROM user WHERE id IN (${ids});
+	</delete>
+
+
 </mapper>

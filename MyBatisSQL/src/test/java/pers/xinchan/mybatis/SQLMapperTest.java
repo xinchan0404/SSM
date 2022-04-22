@@ -26,4 +26,17 @@ public class SQLMapperTest {
         List<User> users = mapper.fuzzyQueryByPassword("345");
         users.forEach(System.out::println);
     }
+
+    @Test
+    public void testDeleteUserById() throws IOException {
+        SQLMapper mapper = MapperUtil.getMapper();
+        mapper.deleteUserById("9, 10, 11");
+    }
+
+    @Test
+    public void testSelectUserByTable() throws IOException {
+        SQLMapper mapper = MapperUtil.getMapper();
+        List<User> users = mapper.selectUserByTable("user");
+        users.forEach(System.out::println);
+    }
 }
